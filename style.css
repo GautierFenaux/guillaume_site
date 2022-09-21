@@ -32,9 +32,10 @@ a {
 h1,
 h2 {
     font-weight: 300;
-    list-style: 1.2;
     margin: 10px 0;
 }
+
+
 
 p {
     margin: 10px 0;
@@ -196,7 +197,7 @@ nav ul li a{
     position: relative;
     top: 60px;
     height: 350px;
-    width: 400px;
+    width: 100%;
     padding: 40px;
     z-index: 100;
     justify-self: end;
@@ -249,11 +250,36 @@ nav ul li a{
 
 .wrapper-section {
     background-color: var(--primary-color);
-    box-shadow: 10px 5px 5px red;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .wrapper-section:nth-child(2) {
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(239,202,8,1) 0%, rgba(255,255,255,1) 100%);
+    background:  rgb(248, 248, 248);
+}
+
+#main .wrapper-section:nth-child(2) h1  {
+    color: black;
+    font-size: 48px;
+}
+
+#main .wrapper-section:nth-child(2) p {
+    color: black;
+    font-size: 24px;
+
+}
+
+#main .wrapper-section:nth-child(2) .presentation ~ div  {
+    width: 60%;
+}
+
+#section-price .flex {
+    flex-direction: column;
+    line-height: 42px;
+    font-size: 20px;
+}
+
+#section-price .image {
+    width: 100%;
 }
 
 .image {
@@ -292,8 +318,9 @@ section {
     height: 100%;
 }
 
+
 .flex-reverse {
-    flex-direction: column-reverse
+    flex-direction: column-reverse;
 }
 
 .margin {
@@ -417,7 +444,11 @@ section {
  
     .showcase {
         height: auto;
-        margin-bottom: 130px;
+        margin-bottom: 150px;
+    }
+
+    .showcase-form {
+        width: 400px;
     }
 
     .showcase-text {
@@ -475,11 +506,11 @@ section {
     }
     
 
-    .presentation div {
+    .wrapper-section:first-child .presentation div {
         width: 33,333%;
     }
     
-    .presentation p {
+    .wrapper-section:first-child .presentation p {
         width: 66.666%;
     }
 
@@ -488,10 +519,17 @@ section {
     }
 
 
-    #main .container .flex {
+    #main .wrapper-section:first-child .container .flex {
         align-items: flex-start;
     }
 
+    #section-price .image {
+        width: 65%;
+    }
+
+    #section-price ul {
+        width: 35%;
+    }
 
 }
 

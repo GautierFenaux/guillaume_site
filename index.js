@@ -1,7 +1,20 @@
 const navToggler = document.querySelector('.nav-toggler');
 const navMenu = document.querySelector('nav ul');
 const navLinks = document.querySelectorAll('nav a');
-console.log({navMenu})
+const sectionPrice = document.getElementById('section-price');
+
+
+window.addEventListener("resize", function() {
+  if (window.innerWidth <= 768) {
+  sectionPrice.classList.remove("flex")
+  } else {
+    sectionPrice.classList.add("flex")
+  };
+});
+
+
+
+
 // load all event listners
 allEventListners();
 
