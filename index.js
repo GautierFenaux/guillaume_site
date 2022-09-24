@@ -3,7 +3,9 @@ const navMenu = document.querySelector('nav ul');
 const navLinks = document.querySelectorAll('nav a');
 const sectionPrice = document.getElementById('section-price');
 
-
+if (window.innerWidth >= 768) {
+  sectionPrice.classList.add("flex")
+}
 window.addEventListener("resize", function() {
   if (window.innerWidth >= 768) {
     sectionPrice.classList.add("flex")
