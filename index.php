@@ -8,7 +8,7 @@ if (!empty($_POST["send"])) {
     $message = $_POST["message"];
 
     $conn = mysqli_connect("localhost", "root", "", "contactform_database") or die("Connection Error: " . mysqli_error($conn));
-    $stmt = $conn->prepare("INSERT INTO contact (contact_name, email, message) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO contact (name, email, message) VALUES (?, ?, ?)");
     $stmt->bind_param('sss',$name,$email,$message);
     $stmt->execute();
     $message = "Votre message a bien été envoyé.";

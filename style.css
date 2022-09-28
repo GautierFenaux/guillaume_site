@@ -21,6 +21,7 @@ body {
   overflow-x: hidden; 
 }
 
+
 ul {
     list-style-type: none;
 }
@@ -949,6 +950,7 @@ footer p, footer i {
 }
 
 #main_coaching {
+    min-height: calc(82.7vh - 70px);
     background-color: #EFCA08;
 }
 
