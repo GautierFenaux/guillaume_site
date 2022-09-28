@@ -39,6 +39,7 @@ h2 {
 
 
 p {
+    font-size: 18px;
     margin: 10px 0;
 }
 
@@ -57,9 +58,6 @@ img {
     background-size: cover;
     box-shadow: inset 0 0 0 100vw rgb(0 0 0 / 25%)
 }
-
-/*NAVBAR*/
-
 
 nav ul {
     position: absolute;
@@ -92,7 +90,6 @@ nav ul li {
 nav ul li a{
     font-size: 24px;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 
@@ -189,14 +186,8 @@ nav ul li a{
 
 
 
-
-
-
-
-
 .showcase {
-    height: 500px;
-    margin-bottom: 270px;
+    margin-bottom: 16em;
 }
 
 .showcase h1 {
@@ -214,7 +205,6 @@ nav ul li a{
 .showcase-form {
     position: relative;
     top: 60px;
-    height: 350px;
     width: 100%;
     padding: 40px;
     z-index: 100;
@@ -283,14 +273,18 @@ nav ul li a{
     padding: 20px 0 70px 0;
 }
 
+#main .wrapper-section:nth-child(1) h1  {
+    font-size: 48px;
+}
+
 
 #main .wrapper-section:nth-child(2) h1  {
-    color: black;
+    color: #333;
     font-size: 48px;
 }
 
 #main .wrapper-section:nth-child(2) p {
-    color: black;
+    color:#333;
     font-size: 24px;
 }
 
@@ -309,7 +303,7 @@ nav ul li a{
 }
 
 .image {
-    width: 320px;
+    width: 85%;
     overflow: auto;
     border-radius: 10px;
 }
@@ -421,12 +415,15 @@ nav ul li a{
 
 
 
-
-
-
-
 .container {
     max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.container-xxl {
+    max-width: 1320px;
     margin: 0 auto;
     overflow: auto;
     padding: 0 40px;
@@ -614,6 +611,71 @@ nav ul li a{
 
 
 
+/***************************************************************************************************************************/
+/**************************************************************************************************************************/
+/******************************************************FOOTER*************************************************************/
+/************************************************************************************************************************/
+/***********************************************************************************************************************/
+
+
+
+
+
+  #footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 24px;
+}
+
+.contact {
+    height: 100%;
+    text-align: center;
+}
+
+.contact i {
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 1.1em;
+    text-align: center;
+
+}
+
+
+.contact .fa-solid span {
+    font-family:'Oswald', sans-serif; 
+}
+
+.legal-part p a, .legal-part p{
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--primary-color);
+}
+footer > p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    padding-bottom: 12px;
+}
+
+footer p, footer i {
+  padding: 20px;
+  margin: 0;
+}
+
+
+
 /********************************************************************************************************************************/
 /*******************************************************************************************************************************/
 /******************************************************MEDIA-QUERY*************************************************************/
@@ -643,8 +705,6 @@ nav ul li a{
         grid-auto-rows: 200px 250px 250px;
     }
 
-
-
     .w-2 {
         grid-column: span 2;
     }
@@ -662,12 +722,15 @@ nav ul li a{
  
     .showcase {
         height: auto;
-        margin-bottom: 150px;
+        margin-bottom: 10em;
     }
 
-    .showcase-form {
-        width: 400px;
+    .image {
+        width: 30%;
+        overflow: auto;
+        border-radius: 10px;
     }
+
 
     .showcase-text {
         text-align: inherit;
@@ -731,9 +794,6 @@ nav ul li a{
     .w-100 {
         width: 100%;
     }
-
-    
-
 
     .margin {
         margin: 24px;
@@ -816,47 +876,62 @@ nav ul li a{
     }
 
     #footer {
-        background-color: var(--primary-color);
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 24px;
+        padding: 12px 0 0 0;
     }
 
-    .contact {
-        height: 100%;
+    footer p, footer i {
+        padding: 14px;
+        margin: 0;
+      }
+    
+      .legal-part {
+        display: flex;
+      }
+
+
+      .grid_coaching {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 90%;
+        margin-top: 0;
+    }
+    
+    .gigagit-img-3, .gigagit-img-4  {
+        grid-column: 1 / span 2;
+    }
+
+    #coaching-text p {
+        font-size: 20px;
+        line-height: 42px !important;
     }
 
     .contact i {
-        display: flex;
-        padding: 12px;
-        color: #fff;
-        letter-spacing: 2px;
-        font-weight: 600;
-        font-size: 24px;
-
+        font-size: 1.4em;
     }
-
-    .contact .fa-solid span {
-        font-family:'Oswald', sans-serif; 
-    }
-
-    .legal-part p {
-        font-size: 24px;
-        font-weight: 600;
-        color: #fff;
-        letter-spacing: 2px;
-
+    
+    
+ 
+    .legal-part p a, .legal-part p{
+        font-size: 20px;
     }
 
 }
+
+
 
 
 @media(min-width: 884px) {
     #main p {
         line-height: 48px;
     }
-
+    @media(min-width: 1140px) {
+       #coaching-section {
+        align-items: inherit;
+       }
+    }
     
 @media(min-width: 1450px) {
     #weekend-presentation i {
@@ -864,4 +939,60 @@ nav ul li a{
     }
 }
 
+}
+
+
+#header-coaching {
+    background: var(--primary-color);
+    box-shadow: none;
+
+}
+
+#main_coaching {
+    background-color: #EFCA08;
+}
+
+.container-xxl section {
+    margin: 54px 0px;
+}
+
+.grid_coaching img {
+    margin-bottom: 24px;
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+}
+
+#coaching-text {
+    align-items: flex-start;
+}
+
+#coaching-text p {
+    line-height: 32px;
+}
+
+#coaching-text h1 {
+    font-size: 40px;
+}
+
+.grid_coaching {
+    margin-top: 24px;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+ 
+  box-shadow: 0 0 0px 1000px var(--secondary-color) inset;
+  -webkit-box-shadow: 0 0 0px 1000px var(--secondary-color) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: var(--secondary-color);
+    padding: 2%;
 }
