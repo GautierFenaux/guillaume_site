@@ -13,13 +13,38 @@
     margin: 0;
     padding: 0;
 }
-
+html {
+    height: 100%;
+}
 body {
     font-family: 'Oswald', sans-serif;
     color: #333;
     line-height: 1.6;
-  overflow-x: hidden; 
+    overflow-x: hidden; 
+    height: 100%;
 }
+
+.box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+  }
+  .box header.row {
+    flex: 0 1 auto;
+    /* The above is shorthand for:
+    flex-grow: 0,
+    flex-shrink: 1,
+    flex-basis: auto
+    */
+  }
+  
+  .box main.row {
+    flex: 1 1 auto;
+  }
+  
+  .box footer.row {
+    flex: 0 1 150px;
+  }  
 
 
 ul {
@@ -950,7 +975,7 @@ footer p, footer i {
 }
 
 #main_coaching {
-    min-height: calc(82.7vh - 70px);
+    /* min-height: calc(100vh - (70px + 150px)); */
     background-color: #EFCA08;
 }
 
