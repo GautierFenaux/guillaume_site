@@ -40,9 +40,9 @@ if (!empty($_POST["send"])) {
 
             <nav>
                 <ul>
-                    <li><a href="./index">Accueil</a></li>
+                    <li><a href="./accueil">Accueil</a></li>
                     <li><a href="#footer">Contact</a></li>
-                    <li><a href="./coaching.html">Coaching en salle</a></li>
+                    <li><a href="./coaching">Coaching en salle</a></li>
                 </ul>
 
 
