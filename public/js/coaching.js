@@ -1,6 +1,10 @@
 // Const used in coaching page to have elements in column direction
 const coachingSection = document.getElementById('coaching-section')
 
+const navToggler = document.querySelector('.nav-toggler');
+const navMenu = document.querySelector('nav ul');
+const navLinks = document.querySelectorAll('nav a');
+
 
   window.addEventListener('load', () => {
     if (window.innerWidth > 1140) {
@@ -23,9 +27,6 @@ window.addEventListener("resize", function() {
   })
 
 
-const navToggler = document.querySelector('.nav-toggler');
-const navMenu = document.querySelector('nav ul');
-const navLinks = document.querySelectorAll('nav a');
 
   // load all event listners
 allEventListners();

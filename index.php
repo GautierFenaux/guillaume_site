@@ -1,6 +1,6 @@
 <?php
 
-require_once "send_via_mailer.php";
+require_once "./app/send_via_mailer.php";
 
 if (!empty($_POST["send"])) {
     $name = $_POST["name"];
@@ -17,8 +17,6 @@ if (!empty($_POST["send"])) {
     $conn->close();
 }
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +25,7 @@ if (!empty($_POST["send"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Guillaume Boquet Coach Sportif</title>
 </head>
@@ -38,13 +36,13 @@ if (!empty($_POST["send"])) {
     <!--Navbar-->
     <div class="navbar" id="navbar">
         <div class="container flex">
-            <h1 class="logo">GB Coaching.</h1>
+        <h1 class="logo"><a href="./accueil">GB Coaching.</a></h1>
 
             <nav>
                 <ul>
-                    <li><a href="/index.php">Accueil</a></li>
+                    <li><a href="./index">Accueil</a></li>
                     <li><a href="#footer">Contact</a></li>
-                    <li><a href="coaching.html">Coaching en salle</a></li>
+                    <li><a href="./coaching.html">Coaching en salle</a></li>
                 </ul>
 
 
@@ -78,9 +76,19 @@ if (!empty($_POST["send"])) {
                         <input  type="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-control">
-                        <textarea type="text" name="message" placeholder="Votre demande" rows="6" required></textarea>
+                        <textarea type="text" name="message" placeholder="Ecrivez votre message..." rows="6" required></textarea>
                     </div>
                     <input type="submit" value="Envoyer" name="send" class="btn btn-primary btn-outline">
+
+                    <div> 
+                        <?php
+                        if (!empty($message)) {
+                            ?>
+                            <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                        <?php
+                        }
+                        ?>
+                    </div>
                 </form>
             </div>
         </div>
@@ -93,7 +101,7 @@ if (!empty($_POST["send"])) {
                 <h1 class="margin">Un objectif : un programme</h1>
                 <section class="presentation flex flex-reverse">
                     <div class="image margin">
-                        <img src="assets/images/guillaume_grey.jpg" alt="guillaume presentation">
+                        <img src="./public/images/guillaume_grey.jpg" alt="guillaume presentation">
                     </div>
                     <p class="margin">
                         Perte de poids, tonification, forme, santé, bien-être etc. Quels que soient vos objectifs sportifs, je vous accompagnerai pour vous aider à les atteindre.
@@ -109,7 +117,7 @@ if (!empty($_POST["send"])) {
                 <p class="margin">Vous choisissez le jour, l'heure et le lieu de la séance</p>
                 <section class="presentation" id="section-price">
                     <div class="image margin">
-                        <img src="assets/images/exercice.JPG" alt="sport collectif">
+                        <img src="./public/images/exercice.jpg" alt="sport collectif">
                     </div>
                     <ul class="flex">
                         <li>Solo - 60€/h</li>
@@ -145,7 +153,7 @@ if (!empty($_POST["send"])) {
                 </div>
                 <section class="presentation w-100" id="section-weekend">
                         <div id="wrapper-image">
-                            <img src="assets/images/plage_people.jpg" alt="bord de plage" class="fade h-100" id="weekend-image">
+                            <img src="./public/images/plage_people.jpg" alt="bord de plage" class="fade h-100" id="weekend-image">
                         </div>
                         <button class="btn btn-primary btn-outline" id="btn-mobile"> Découvrir le programme </button>
                 </section>
@@ -156,11 +164,15 @@ if (!empty($_POST["send"])) {
     <footer>
         <div id="footer">
             <div class="contact">
-                <i class="fa-solid fa-mobile fa-2x">:<span>06.59.29.70.87</span></i>
-                <i class="fa-solid fa-at fa-2x">:<span>guillaume.boquet@gmail.com</span></i>
+                <div>
+                    <i class="fa-solid fa-mobile"></i><span> : 06.59.29.70.87</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-at"></i><span> : guillaume.boquet@gmail.com</span>
+                </div>
             </div>
             <div class="legal-part">
-                <p><a href="mentions_legales.html">Mentions légales</a></p>
+                <p><a href="./mentions_legales.html">Mentions légales</a></p>
                 <p>© Guillaume Boquet</p>
             </div>
          </div>
@@ -169,6 +181,6 @@ if (!empty($_POST["send"])) {
 
 
 
-    <script src="index.js"></script>
+    <script src="./public/js/index.js"></script>
 </body>
 </html>

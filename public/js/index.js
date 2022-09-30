@@ -81,7 +81,7 @@ let images = ["bord_de_plage.jpg", "falaise.jpg", "falaise_2.jpg", "falaise_3.jp
 function changePicture() {
     if (++currentPos >= images.length)
         currentPos = 0;
-    image.src = 'assets/images/' + images[currentPos];
+    image.src = './public/images/' + images[currentPos];
 }
 
 
@@ -124,22 +124,3 @@ arrowWeekend.addEventListener('click', () => {
   weekendPresentation.style.animationFillMode =  'forwards'
 
 })
-
-var arrayOfInput = document.getElementsByTagName('input');
-var autofilled = document.querySelectorAll('input:-internal-autofill-selected');
-console.log(arrayOfInput)
-
-
-
-// for (var i = 0; i < autofill.length; i++) {
-//   //Wrap this in a try/catch because non webkit browsers will log errors on this pseudo element
-//   try{
-//     if (autofill[i].matches(':-webkit-autofill')) {
-//         autofill.style.backgroundColor = 'yellow'
-//     }
-//   }
-//   catch(error){
-//     return(false);
-//   }
-//  }
-

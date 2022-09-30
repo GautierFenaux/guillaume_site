@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Coaching en salle</title>
 </head>
@@ -14,13 +14,13 @@
         <!--Navbar-->
         <div class="navbar" id="navbar">
             <div class="container-xxl flex">
-                <h1 class="logo">GB Coaching.</h1>
+                <h1 class="logo"><a href="accueil">GB Coaching.</a></h1>
     
                 <nav>
                     <ul>
-                        <li><a href="/">Accueil</a></li>
+                        <li><a href="accueil">Accueil</a></li>
                         <li><a href="#footer">Contact</a></li>
-                        <li><a href="coaching.html">Coaching en salle</a></li>
+                        <li><a href="coaching">Coaching en salle</a></li>
                     </ul>
     
     
@@ -45,9 +45,9 @@
                         </p>
                     </div>
                     <div class="grid_coaching">
-                        <img src="assets/images/gigafit_exterieur.jpg" alt="gigafit exterieur">
-                        <img src="assets/images/gigafit_interieur.jpg" alt="gigafit_interieur">
-                        <img src="assets/images/gigafit_running.jpg" alt="gigafit_running" class="gigagit-img-3">
+                        <img src="./public/images/gigafit_exterieur.jpg" alt="gigafit exterieur">
+                        <img src="./public/images/gigafit_interieur.jpg" alt="gigafit_interieur">
+                        <img src="./public/images/gigafit_running.jpg" alt="gigafit_running" class="gigagit-img-3">
                         <!-- <img src="assets/images/gigafit_muscu.jpg" alt="gigafit_musculation" class="gigagit-img-4"> -->
                     </div>
                 </section>
@@ -57,8 +57,12 @@
         <footer class="row">
             <div id="footer" >
                 <div class="contact">
-                    <i class="fa-solid fa-mobile fa-2x">:<span>06.59.29.70.87</span></i>
-                    <i class="fa-solid fa-at fa-2x">:<span>guillaume.boquet@gmail.com</span></i>
+                    <div>
+                        <i class="fa-solid fa-mobile"></i><span> : 06.59.29.70.87</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-at"></i><span> : guillaume.boquet@gmail.com</span>
+                    </div>
                 </div>
                 <div class="legal-part">
                     <p><a href="mentions_legales.html">Mentions légales</a></p>
@@ -69,6 +73,6 @@
         </footer>
     </div>
 
-        <script src="coaching.js"></script>
+        <script src="./public/js/coaching.js"></script>
 </body>
 </html>
