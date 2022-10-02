@@ -36,13 +36,13 @@ if (!empty($_POST["send"])) {
     <!--Navbar-->
     <div class="navbar" id="navbar">
         <div class="container flex">
-        <h1 class="logo"><a href="./accueil">GB Coaching.</a></h1>
+        <h1 class="logo"><a href="/">GB Coaching.</a></h1>
 
             <nav>
                 <ul>
-                    <li><a href="./accueil">Accueil</a></li>
+                    <li><a href="/">Accueil</a></li>
                     <li><a href="#footer">Contact</a></li>
-                    <li><a href="./coaching">Coaching en salle</a></li>
+                    <li><a href="/coaching">Coaching en salle</a></li>
                 </ul>
 
 
@@ -101,7 +101,7 @@ if (!empty($_POST["send"])) {
                 <h1 class="margin">Un objectif : un programme</h1>
                 <section class="presentation flex flex-reverse">
                     <div class="image margin">
-                        <img src="./public/images/guillaume_grey.jpg" alt="guillaume presentation">
+                        <img src="./public/images/guillaume_grey.jpg" alt="guillaume presentation" loading="lazy">
                     </div>
                     <p class="margin">
                         Perte de poids, tonification, forme, santé, bien-être etc. Quels que soient vos objectifs sportifs, je vous accompagnerai pour vous aider à les atteindre.
@@ -117,7 +117,7 @@ if (!empty($_POST["send"])) {
                 <p class="margin">Vous choisissez le jour, l'heure et le lieu de la séance</p>
                 <section class="presentation" id="section-price">
                     <div class="image margin">
-                        <img src="./public/images/exercice.jpg" alt="sport collectif">
+                        <img src="./public/images/exercice.jpg" alt="sport collectif" loading="lazy">
                     </div>
                     <ul class="flex">
                         <li>Solo - 60€/h</li>
@@ -153,7 +153,7 @@ if (!empty($_POST["send"])) {
                 </div>
                 <section class="presentation w-100" id="section-weekend">
                         <div id="wrapper-image">
-                            <img src="./public/images/plage_people.jpg" alt="bord de plage" class="fade h-100" id="weekend-image">
+                            <img src="./public/images/plage_people.jpg" alt="bord de plage"  class="fade h-100" id="weekend-image">
                         </div>
                         <button class="btn btn-primary btn-outline" id="btn-mobile"> Découvrir le programme </button>
                 </section>

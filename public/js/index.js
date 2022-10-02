@@ -12,6 +12,35 @@ const buttonMobile = document.getElementById('btn-mobile');
 // Const used in coaching page to have elements in column direction
 const coachingSection = document.getElementById('coaching-section')
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".header"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          entry.target.style.boxShadow = 'inset 0 0 0 100vw rgb(0 0 0 / 25%)'
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
+});
+
+
+
+
+
+
+
+
 if (window.innerWidth >= 768) {
   sectionPrice.classList.add("flex")
 }
@@ -124,3 +153,6 @@ arrowWeekend.addEventListener('click', () => {
   weekendPresentation.style.animationFillMode =  'forwards'
 
 })
+
+
+
