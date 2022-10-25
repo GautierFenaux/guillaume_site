@@ -1,34 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>Coaching en salle</title>
-</head>
-<body>
-    <div class="box">
+<?php
+    $title = "Coaching en salle";
+    require_once './includes/head.php'
+?>
+<div class="box">
     <header class="header row" id="header-coaching">
         <!--Navbar-->
         <div class="navbar" id="navbar">
             <div class="container-xxl flex">
                 <h1 class="logo"><a href="accueil">GB Coaching.</a></h1>
-    
+
                 <nav>
                     <ul>
                         <li><a href="accueil">Accueil</a></li>
                         <li><a href="#footer">Contact</a></li>
                         <li><a href="coaching">Coaching en salle</a></li>
                     </ul>
-    
-    
+
+
                     <button class="nav-toggler">
                         <span></span>
                     </button>
                 </nav>
-    
+
             </div>
         </div>
     </header>
@@ -53,26 +46,27 @@
                 </section>
             </div>
         </div>
-        </main>
-        <footer class="row">
-            <div id="footer" >
-                <div class="contact">
-                    <div>
-                        <i class="fa-solid fa-mobile"></i><span> : 06.59.29.70.87</span>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-at"></i><span> : guillaume.boquet@gmail.com</span>
-                    </div>
+    </main>
+    <footer class="row">
+        <div id="footer">
+            <div class="contact">
+                <div>
+                    <i class="fa-solid fa-mobile"></i><span> : 06.59.29.70.87</span>
                 </div>
-                <div class="legal-part">
-                    <p><a href="mentions_legales.html">Mentions légales</a></p>
-                    <p>© Guillaume Boquet</p>
+                <div>
+                    <i class="fa-solid fa-at"></i><span> : guillaume.boquet@gmail.com</span>
                 </div>
-             </div>
-            <p> <i>Site réalisé par Gautier FENAUX </i></p>
-        </footer>
-    </div>
+            </div>
+            <div class="legal-part">
+                <p><a href="mentions_legales.html">Mentions légales</a></p>
+                <p>© Guillaume Boquet</p>
+            </div>
+        </div>
+        <p> <i>Site réalisé par Gautier FENAUX </i></p>
+    </footer>
+</div>
 
-        <script src="./public/js/coaching.js"></script>
-</body>
-</html>
+<script src="./public/js/coaching.js"></script>
+<?php
+    require_once './includes/footer.php'
+?>
