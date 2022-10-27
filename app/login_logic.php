@@ -28,15 +28,9 @@ if (isset($_POST["submit"])) {
         $stmt->bind_param('ss', $post['username_email'], $post['username_email']);
         $stmt->execute();
         $result = $stmt->get_result();
-        // var_dump($result->num_rows);
-        // die();
-        // fetch user from database
-        // $fetch_user_query = "SELECT * FROM users WHERE username='$username_email' OR email='$username_email'";
-        // $fetch_user_result = mysqli_query($connection, $fetch_user_query);
 
         if ($result->num_rows == 1) {
             //Convert record into associative array
-            // $user_record = mysqli_fetch_assoc($fetch_user_result);
             $user = $result->fetch_assoc();
             $db_password = $user['password'];
             $stmt->close();
@@ -44,12 +38,11 @@ if (isset($_POST["submit"])) {
            
             // Compare passwords from form and database
 
-            // if (password_verify($password, $db_password)) {
-                if($post['password'] === $db_password) {
+            if (password_verify($post['password'], $db_password)) {
+                
                 // set session for access control
                 $_SESSION['user-id'] = $user['id'];
                 // set session if user is an admin
-
                 if ($user['is_admin'] == 1) {
                     $_SESSION['user_is_admin'] = true;
                     header('location: ' . ROOT_URL . 'videos.php');

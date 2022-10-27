@@ -1,5 +1,7 @@
 RewriteEngine on
 RewriteRule ^accueil$ index.php
-RewriteRule ^coaching$ coaching.html
+RewriteRule ^coaching$ coaching.php
+RewriteRule ^videos$ videos.php
+
 
 

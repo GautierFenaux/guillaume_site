@@ -5,7 +5,7 @@ require_once './app/send_via_mailer.php';
 $title = "Guillaume Boquet Coach Sportif";
 require_once './includes/head.php';
 
-// Message de confirmation une fois le mail envoyé.
+// Message de confirmation une fois le mail envoyé par le formulaire de contact (logique dans ./app/send_via_mailer.php).
 $check = "Votre message a bien été envoyé.";
 ?>
 
@@ -15,13 +15,15 @@ $check = "Votre message a bien été envoyé.";
     <!--Navbar-->
     <div class="navbar" id="navbar">
         <div class="container flex">
-            <h1 class="logo"><a href="/">GB Coaching.</a></h1>
+            <h1 class="logo"><a href="./accueil">GB Coaching.</a></h1>
 
             <nav>
                 <ul>
-                    <li><a href="/">Accueil</a></li>
+                    <li><a href="./accueil">Accueil</a></li>
+                    <li><a href="./coaching">Coaching en salle</a></li>
+                    <li><a href="./videos.php">Coaching vidéo</a></li>
                     <li><a href="#footer">Contact</a></li>
-                    <li><a href="./coaching.php">Coaching en salle</a></li>
+
                 </ul>
 
 
@@ -140,27 +142,6 @@ $check = "Votre message a bien été envoyé.";
     </div>
 </main>
 
-<footer>
-    <div id="footer">
-        <div class="contact">
-            <div>
-                <i class="fa-solid fa-mobile"></i><span> : 06.59.29.70.87</span>
-            </div>
-            <div>
-                <i class="fa-solid fa-at"></i><span> : guillaume.boquet@gmail.com</span>
-            </div>
-        </div>
-        <div class="legal-part">
-            <p><a href="./mentions_legales.html">Mentions légales</a></p>
-            <p>© Guillaume Boquet</p>
-        </div>
-    </div>
-    <p> <i>Site réalisé par Gautier FENAUX </i></p>
-</footer>
-
-
-
-<script src="./public/js/index.js"></script>
 <?php 
-    require './includes/footer.php'
+    include './includes/footer.php'
 ?>

@@ -18,8 +18,7 @@ if (!empty($_POST["send"])) {
 		// $mail->SMTPSecure = 'tls';
 		$mail->CharSet = 'UTF-8';											
 		$mail->Host = 'smtp.mailtrap.io';		
-		$mail->SMTPAuth = true;							
-	
+		$mail->SMTPAuth = true;						
 		$mail->Username = 'a122fa950f97c9';
 		$mail->Password = 'dd8e6baa1fb402';
 		$mail->Port	 = 2525;

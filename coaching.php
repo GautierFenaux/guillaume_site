@@ -2,30 +2,9 @@
     $title = "Coaching en salle";
     require_once './includes/head.php'
 ?>
-<div class="box">
-    <header class="header row" id="header-coaching">
-        <!--Navbar-->
-        <div class="navbar" id="navbar">
-            <div class="container-xxl flex">
-                <h1 class="logo"><a href="accueil">GB Coaching.</a></h1>
 
-                <nav>
-                    <ul>
-                        <li><a href="accueil">Accueil</a></li>
-                        <li><a href="#footer">Contact</a></li>
-                        <li><a href="coaching">Coaching en salle</a></li>
-                    </ul>
-
-
-                    <button class="nav-toggler">
-                        <span></span>
-                    </button>
-                </nav>
-
-            </div>
-        </div>
-    </header>
-    <main id="main_coaching" class="row">
+    <?php include './includes/navbar.php'?>
+    <main id="main-coaching" class="row">
         <div class="wrapper-section_coaching">
             <div class="container-xxl">
                 <section class="presentation flex-column" id="coaching-section">
@@ -47,26 +26,7 @@
             </div>
         </div>
     </main>
-    <footer class="row">
-        <div id="footer">
-            <div class="contact">
-                <div>
-                    <i class="fa-solid fa-mobile"></i><span> : 06.59.29.70.87</span>
-                </div>
-                <div>
-                    <i class="fa-solid fa-at"></i><span> : guillaume.boquet@gmail.com</span>
-                </div>
-            </div>
-            <div class="legal-part">
-                <p><a href="mentions_legales.html">Mentions légales</a></p>
-                <p>© Guillaume Boquet</p>
-            </div>
-        </div>
-        <p> <i>Site réalisé par Gautier FENAUX </i></p>
-    </footer>
-</div>
 
-<script src="./public/js/coaching.js"></script>
 <?php
-    require_once './includes/footer.php'
+    include './includes/footer.php'
 ?>
