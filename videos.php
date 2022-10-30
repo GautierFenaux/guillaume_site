@@ -19,7 +19,7 @@ use Phppot\SecurityService\securityService as antiCsrf;
     <div id="main-coaching">
         <div class="container flex-column">
 
-            <div id="postModal" class="modal">
+            <div id="modal-login" class="modal">
                 <div class="modal-content">
                     <div style="padding-top:74.800%;position:relative;">
                         <iframe src="https://gifer.com/embed/2JHR" width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe>
@@ -76,7 +76,6 @@ use Phppot\SecurityService\securityService as antiCsrf;
                 <video controls>
                     <source src="<?= substr($row['source'], 6); ?>" data-id="<?= $row['id'] ?>">
                 </video>
-
                 <?php if (isset($_SESSION['user_is_admin'])) : ?>
                     <button class="modalButton btn btn-primary btn-outline margin">Supprimer</button>
 
@@ -107,5 +106,4 @@ use Phppot\SecurityService\securityService as antiCsrf;
             </div>
         <?php } ?>
         </div>
-
         <?php include './includes/footer.php'; ?>

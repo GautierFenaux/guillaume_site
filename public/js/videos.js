@@ -1,3 +1,28 @@
+
+let modal = document.getElementById('modal-login');
+
+
+
+let firstTime = localStorage.getItem("first_time");
+console.log(localStorage);
+console.log(firstTime);
+if(!firstTime) {
+    // first time loaded!
+    localStorage.setItem("first_time","1");
+}
+
+if(firstTime == 1) {
+    window.onload = function(e) {
+                e.preventDefault();
+                modal.style.display = "block";
+    }
+
+    localStorage.removeItem('first_time');
+
+};
+
+
+
 // Get the button that opens the modal
 var btn = document.querySelectorAll(".modalButton");
 // All page modals
