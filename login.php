@@ -2,7 +2,7 @@
 
 $title = "Se connecter";
 require_once './includes/head.php';
-require_once __DIR__ . './lib/SecurityService.php';
+require_once __DIR__ . '/lib/SecurityService.php';
 use Phppot\SecurityService\securityService as antiCsrf;
 
 

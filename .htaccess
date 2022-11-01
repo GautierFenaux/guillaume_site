@@ -3,5 +3,8 @@ RewriteRule ^accueil$ index.php
 RewriteRule ^coaching$ coaching.php
 RewriteRule ^videos$ videos.php
 
-
+<files signup.php>
+    order deny,allow
+    deny from all
+</files>
 

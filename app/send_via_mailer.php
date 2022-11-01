@@ -15,13 +15,12 @@ if (!empty($_POST["send"])) {
 
 		// $mail->SMTPDebug = 2;									
 		$mail->isSMTP();
-		// $mail->SMTPSecure = 'tls';
+		$mail->SMTPSecure = 'tls';
 		$mail->CharSet = 'UTF-8';											
-		$mail->Host = 'smtp.mailtrap.io';		
+		$mail->Host = 'smtp.ionos.fr';		
 		$mail->SMTPAuth = true;						
-		$mail->Username = 'a122fa950f97c9';
-		$mail->Password = 'dd8e6baa1fb402';
-		$mail->Port	 = 2525;
+		
+		$mail->Port	 = 587;
 		$mail->setFrom($email, $name);		
 		$mail->addAddress('guillaume.boquet@gmail.com', 'Guillaume Boquet');
 		$mail->isHTML(true);								

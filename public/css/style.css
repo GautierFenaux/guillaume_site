@@ -798,6 +798,17 @@ video {
     border-radius: 5px;
 }
 
+
+.modal-content-login {
+    background-color: var(--primary-color);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    position: relative;
+    border-radius: 5px;
+}
+
 /* The Close Button */
 .close {
     color: white;
@@ -1102,6 +1113,10 @@ video {
 
     video {
         width: 80%;
+    }
+
+    .modal-content-login {
+        width: 40%;
     }
 
 }

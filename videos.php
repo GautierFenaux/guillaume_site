@@ -3,7 +3,7 @@
 $title = "Videos";
 require_once './includes/head.php';
 require_once './app/video/fetch_videos.php';
-require_once __DIR__ . './lib/SecurityService.php';
+require_once __DIR__ . '/lib/SecurityService.php';
 
 use Phppot\SecurityService\securityService as antiCsrf;
 
@@ -12,17 +12,16 @@ use Phppot\SecurityService\securityService as antiCsrf;
 <?php include './includes/navbar.php' ?>
 
 
-
 <!-- Trigger/Open The Modal -->
 <?php if (isset($_SESSION['user_is_admin'])) : ?>
-
+    
     <div id="main-coaching">
         <div class="container flex-column">
 
-            <div id="modal-login" class="modal">
-                <div class="modal-content">
-                    <div style="padding-top:74.800%;position:relative;">
-                        <iframe src="https://gifer.com/embed/2JHR" width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe>
+            <div id="modal-login" style='display: none' class='modal'>
+                <div class="modal-content-login">
+                    <div>
+                        <img src="./public/images/gif_admin.gif"></img>
                     </div>
                 </div>
             </div>
@@ -67,7 +66,6 @@ use Phppot\SecurityService\securityService as antiCsrf;
 
 
         <?php endif ?>
-
 
         <?php while ($row = mysqli_fetch_assoc($query)) { ?>
             <div class="flex-column padding">

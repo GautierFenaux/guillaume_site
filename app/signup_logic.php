@@ -3,7 +3,6 @@ require '../config/database.php';
 
 // get signup form data if signup button was clicked
 
-
 if(isset($_POST["submit"])) {
 
     $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -14,7 +13,7 @@ if(isset($_POST["submit"])) {
     die();
 }
 
-if(strlen($createpassword) < 8 || $confirmpassword < 8) {
+if(strlen($createpassword) < 8 || strlen($confirmpassword) < 8) {
     $_SESSION["signup"] = 'Le mot de passe ne peut pas faire moins de 8 caractères.';
 }
 
